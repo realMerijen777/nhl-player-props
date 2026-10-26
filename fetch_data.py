@@ -56,61 +56,6 @@ def games_on(date_str):
     return []
 
 
-def fetch_odds(teams):
-    """Kurzy na vítěze a total z The Odds API (Pinnacle, jinak medián EU bookmakerů).
-
-    Vrací {"<AWAY>@<HOME>": {"bookmaker", "p_home", "total", "p_over"}} s odstraněnou marží.
-    Bez ODDS_API_KEY vrací {} a model použije obdržené góly soupeře.
-    """
-    key = os.environ.get("ODDS_API_KEY")
-    if not key:
-        return {}
-    url = ("https://api.the-odds-api.com/v4/sports/icehockey_nhl/odds"
-           f"?regions=eu&markets=h2h,totals&oddsFormat=decimal&apiKey={key}")
-    try:
-        req = urllib.request.Request(url, headers={"User-Agent": "nhl-player-props/1.0"})
-        with urllib.request.urlopen(req, timeout=30) as r:
-            events = json.load(r)
-            print("Odds API zbývá kreditů:", r.headers.get("x-requests-remaining"))
-    except Exception as e:  # noqa: BLE001
-        print(f"WARN odds: {e}", file=sys.stderr)
-        return {}
-    by_name = {t["name"].lower(): ab for ab, t in teams.items()}
-    out = {}
-    for ev in events:
-        h, a = by_name.get(ev["home_team"].lower()), by_name.get(ev["away_team"].lower())
-        if not h or not a:
-            continue
-        books = ev.get("bookmakers", [])
-        books = sorted(books, key=lambda b: b["key"] != "pinnacle")  # Pinnacle první
-        rows = []
-        for b in books:
-            mk = {m["key"]: m for m in b.get("markets", [])}
-            if "h2h" not in mk or "totals" not in mk:
-                continue
-            ml = {o["name"]: o["price"] for o in mk["h2h"]["outcomes"]}
-            tot = mk["totals"]["outcomes"]
-            over = next((o for o in tot if o["name"] == "Over"), None)
-            under = next((o for o in tot if o["name"] == "Under"), None)
-            if ev["home_team"] not in ml or ev["away_team"] not in ml or not over or not under:
-                continue
-            ih, ia = 1 / ml[ev["home_team"]], 1 / ml[ev["away_team"]]
-            io, iu = 1 / over["price"], 1 / under["price"]
-            rows.append({"bookmaker": b["key"], "p_home": ih / (ih + ia), "total": over.get("point"), "p_over": io / (io + iu)})
-        if not rows:
-            continue
-        if rows[0]["bookmaker"] == "pinnacle":
-            pick = rows[0]
-        else:  # medián přes knihy se stejnou linií totalu
-            line = sorted(r["total"] for r in rows)[len(rows) // 2]
-            same = [r for r in rows if r["total"] == line]
-            pick = {"bookmaker": "median", "total": line,
-                    "p_home": sorted(r["p_home"] for r in same)[len(same) // 2],
-                    "p_over": sorted(r["p_over"] for r in same)[len(same) // 2]}
-        out[f"{a}@{h}"] = {k: (round(v, 4) if isinstance(v, float) else v) for k, v in pick.items()}
-    return out
-
-
 def team_name(t):
     place = (t.get("placeName") or {}).get("default", "")
     common = (t.get("commonName") or {}).get("default", "")
@@ -259,10 +204,7 @@ def main():
             "players": rows,
         })
 
-    odds = fetch_odds(teams)
-
     payload = {
-        "odds": odds,
         "date": t_str,
         "generated_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "season": cur_season,

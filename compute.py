@@ -66,35 +66,6 @@ def rate_for(p, key):
     return final, base, form, low_conf
 
 
-def pois(k, lam):
-    return math.exp(-lam) * lam ** k / math.factorial(k)
-
-
-def team_lambdas(total, p_over, p_home):
-    """Z totalu a pravděpodobnosti vítězství (bez marže) odvodí očekávané góly obou týmů.
-
-    1) Najde μ celkových gólů tak, aby P(Poisson(μ) > total) = p_over.
-    2) Rozdělí μ mezi domácí a hosty tak, aby P(výhra domácích) = p_home
-       (remíza po 60 min se počítá 50/50 jako prodloužení/nájezdy).
-    """
-    lo, hi = 2.0, 10.0
-    for _ in range(60):
-        mu = (lo + hi) / 2
-        p = 1 - sum(pois(k, mu) for k in range(int(math.floor(total)) + 1))
-        lo, hi = (mu, hi) if p < p_over else (lo, mu)
-    mu = (lo + hi) / 2
-    lo, hi = 0.25, 0.75
-    for _ in range(60):
-        sh = (lo + hi) / 2
-        lh, la = mu * sh, mu * (1 - sh)
-        ph = sum(pois(i, lh) * pois(j, la) for i in range(15) for j in range(15) if i > j)
-        pt = sum(pois(i, lh) * pois(i, la) for i in range(15))
-        win = ph + 0.5 * pt
-        lo, hi = (sh, hi) if win < p_home else (lo, sh)
-    sh = (lo + hi) / 2
-    return mu * sh, mu * (1 - sh)
-
-
 def k_toi(p):
     s, l = p["cur"].get("toi_avg"), p["last"].get("toi_avg")
     if not s or not l:
@@ -112,21 +83,6 @@ def main():
     for g in data["games"]:
         team_game[g["away"]] = (g, False, g["home"])
         team_game[g["home"]] = (g, True, g["away"])
-
-    # Očekávané góly týmu z kurzů (Pinnacle). k_team = dnešní λ / běžná produkce týmu.
-    gf_all = [t["gf_pg"] for t in teams.values() if t.get("gf_pg")]
-    lg_gf = sum(gf_all) / len(gf_all) if gf_all else 3.1
-    team_k, team_lam = {}, {}
-    for g in data["games"]:
-        o = (data.get("odds") or {}).get(f"{g['away']}@{g['home']}")
-        if not o or o.get("total") is None:
-            continue
-        lh, la = team_lambdas(o["total"], o["p_over"], o["p_home"])
-        for ab, lam in ((g["home"], lh), (g["away"], la)):
-            gf = teams.get(ab, {}).get("gf_pg") or lg_gf
-            base = 0.5 * gf + 0.5 * lg_gf
-            team_k[ab] = min(1.30, max(0.75, lam / base))
-            team_lam[ab] = lam
 
     def last(n):
         return norm((n or "").split()[-1]) if n else ""
@@ -160,13 +116,9 @@ def main():
         ot = teams.get(opp, {})
         opp_ga = ot.get("ga_pg")
         ol = lines.get(opp, {})
-        if p["team"] in team_k:
-            # Kurzy už obsahují soupeře, brankáře i domácí prostředí
-            k_opp, k_gk, k_home = team_k[p["team"]], 1.0, 1.0
-        else:
-            k_opp = 1 + 0.5 * (opp_ga / lg - 1) if opp_ga and ot.get("gp", 0) >= 3 else 1.0
-            k_gk = 1.05 if ol.get("goalie_backup") else 0.95 if ol.get("goalie_elite") else 1.0
-            k_home = 1.02 if home else 0.98
+        k_opp = 1 + 0.5 * (opp_ga / lg - 1) if opp_ga and ot.get("gp", 0) >= 3 else 1.0
+        k_gk = 1.05 if ol.get("goalie_backup") else 0.95 if ol.get("goalie_elite") else 1.0
+        k_home = 1.02 if home else 0.98
         k_b2b = 0.97 if teams.get(p["team"], {}).get("b2b") else 1.0
         kt = k_toi(p)
 
@@ -188,10 +140,7 @@ def main():
                 notes.append("back-to-back")
             if low:
                 notes.append("nízká jistota")
-            if p["team"] in team_lam:
-                opp_txt = f"{ot.get('name', opp)}; tým dnes podle kurzů {fmt(team_lam[p['team']],2)} gólu (k {fmt(team_k[p['team']],2)})"
-            else:
-                opp_txt = f"{ot.get('name', opp)} {fmt(opp_ga,1)} GA/z (bez kurzů)" if opp_ga else f"{ot.get('name', opp)} GA n/a"
+            opp_txt = f"{ot.get('name', opp)} {fmt(opp_ga,1)} GA/z" if opp_ga else f"{ot.get('name', opp)} GA n/a"
             reason = (f"{role}{', PP1' if pp1 else ''}; letos {p['cur'][key]} v {p['cur']['gp']} z, "
                       f"min. sez. {p['prev'][key]} v {p['prev']['gp']} z → {fmt(final)} {LAB[m]}; "
                       f"{'; '.join(notes) + '; ' if notes else ''}soupeř {opp_txt}")

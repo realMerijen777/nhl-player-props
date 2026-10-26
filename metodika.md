@@ -7,7 +7,6 @@ Cíl: každý den shortlist kandidátů na trhy **Získá bod / Dá gól / Získ
 | Data | Zdroj | Kdy |
 |---|---|---|
 | Rozpis, statistiky hráčů, forma 5 zápasů, čas na ledě, minulá sezóna, góly týmů, včerejší box score | **NHL API** (`fetch_data.py`, GitHub Action) | 05:10 SEČ |
-| Kurzy na vítěze a total zápasu | **Pinnacle přes The Odds API** (bez marže), jinak medián EU bookmakerů | 05:10 SEČ |
 | Lajny, PP1, potvrzení brankáři | **DailyFaceoff** (ranní úloha Claude) | 06:43 SEČ |
 
 Pravidlo: hráč bez role v lajnách nebo bez dat se vyřadí. Nic se nedoplňuje z paměti.
@@ -32,18 +31,16 @@ Váha jen 20 %: 5 zápasů je hlavně šum.
 k_toi = (TOI posl. 5 z / TOI sezóna) ^ 0,8, omezeno 0,85–1,15
 ```
 
-**Krok 4 – očekávané góly týmu (hlavní zápasový faktor):**
-1. Z totalu a pravděpodobnosti over (bez marže) se najde μ celkových gólů (Poisson).
-2. μ se rozdělí mezi týmy tak, aby seděla pravděpodobnost výhry domácích (remíza po 60 min = 50/50).
-3. `k_team = λ_týmu_dnes / (0,5 × góly týmu za zápas + 0,5 × průměr ligy)`, omezeno 0,75–1,30.
+**Krok 4 – zápasové koeficienty:**
+- Soupeř: `k_opp = 1 + 0,5 × (GA/z soupeře / GA/z ligy − 1)` (polovina efektu, raná sezóna je šum)
+- Brankář soupeře: potvrzený záložník ×1,05, elitní jednička ×0,95, jinak ×1,00
+- Domácí ×1,02, venku ×0,98
 
-Kurzy už obsahují soupeře, brankáře, zranění i domácí prostředí, proto se při jejich dostupnosti ostatní zápasové koeficienty nepoužívají.
-
-**Záloha bez kurzů:** `k_opp = 1 + 0,5 × (GA/z soupeře / GA/z ligy − 1)`, záložní brankář soupeře ×1,05, elitní jednička ×0,95, doma ×1,02, venku ×0,98.
+Kurzy na zápas (Pinnacle apod.) se do modelu záměrně nepoužívají (rozhodnutí uživatele 26. 10. 2026).
 
 **Krok 5 – pravděpodobnost:**
 ```
-λ = rate_final × k_toi × k_team × k_b2b × 0,97      (k_b2b = 0,97 při back-to-back)
+λ = rate_final × k_toi × k_opp × k_brankář × k_dom × k_b2b × 0,97      (k_b2b = 0,97 při back-to-back)
 P = 1 − e^(−λ)
 fair = 1 / P,  min. kurz = max(1,70; fair × 1,08)
 ```

@@ -22,8 +22,6 @@ jobs:
         with:
           python-version: "3.12"
       - name: Stáhnout data z NHL API
-        env:
-          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: python fetch_data.py ${{ github.event.inputs.date }}
       - name: Commit
         run: |
