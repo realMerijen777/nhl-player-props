@@ -26,18 +26,18 @@ PPG = w × PPG_akt + (1 − w) × PPG_min
 - PPG = body/zápas (pro gól G/zápas, pro asistenci A/zápas).
 - Nováček bez minulé sezóny: místo PPG_min použij 0,40 (útočník) / 0,25 (obránce) a do zdůvodnění napiš "nízká jistota".
 
-**Krok 1b – forma (posledních 4 zápasů):**
+**Krok 1b – forma (posledních 5 zápasů):**
 ```
-rate_L4 = X za posledních 4 zápasy / 4
-PPG_final = 0,80 × PPG + 0,20 × rate_L4
+rate_L5 = X za posledních 5 zápasů / 5
+PPG_final = 0,80 × PPG + 0,20 × rate_L5
 ```
-Váha formy je záměrně jen 20 %: 4 zápasy jsou statisticky hlavně šum (hráč s 0,9 b/z má 4 zápasy bez bodu zhruba v 1 z 25 případů).
+Váha formy je záměrně jen 20 %: 5 zápasů je statisticky hlavně šum.
 
 **Krok 1c – čas na ledě (TOI):**
 ```
-k_toi = (TOI_posl.4 / TOI_sezóna) ^ 0,8, omezeno na 0,85–1,15
+k_toi = (TOI_posl.5 / TOI_sezóna) ^ 0,8, omezeno na 0,85–1,15
 ```
-TOI je lepší ukazatel změny role než body. Pokud se zvedl PP TOI o 1+ min/zápas, přidej ×1,04.
+TOI je lepší ukazatel změny role než body. Data: NHL API přes repo nhl-player-props (GitHub Action 05:10), výpočet v compute.py.
 
 **Krok 2 – role (změna lajny / PP oproti minulé sezóně):**
 - Hráč posunut do PP1, minule PP2/bez PP: ×1,08
