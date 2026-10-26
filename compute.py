@@ -153,7 +153,7 @@ def main():
                     "date": g["date_prague"],
                     "game": f"{teams[g['away']]['name']} @ {teams[g['home']]['name']}",
                     "time": f"{g['start_prague']} SEČ",
-                    "player": p["name"], "team": teams[p["team"]]["name"], "market": m,
+                    "player": p["name"], "player_id": p["id"], "team": teams[p["team"]]["name"], "market": m,
                     "p": round(P, 3), "fair": round(fair, 2), "min": round(max(MIN_ODDS, fair * EDGE), 2),
                     "reason": reason, "hit": None, "odds": None, "bet": False, "source": "model",
                 },
