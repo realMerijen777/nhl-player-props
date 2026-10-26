@@ -84,6 +84,17 @@ def main():
         team_game[g["away"]] = (g, False, g["home"])
         team_game[g["home"]] = (g, True, g["away"])
 
+    def last(n):
+        return norm((n or "").split()[-1]) if n else ""
+
+    def lookup(name, team, keys):
+        """Přesná shoda jména, jinak shoda příjmení v rámci týmu, pokud je jednoznačná (Gabe vs Gabriel)."""
+        if norm(name) in keys:
+            return norm(name)
+        same = [k for k, ln in keys.items() if ln == last(name)]
+        team_last = [p for p in data["players"] if p["team"] == team and last(p["name"]) == last(name)]
+        return same[0] if len(same) == 1 and len(team_last) == 1 else None
+
     cands = []
     for p in data["players"]:
         tg = team_game.get(p["team"])
@@ -91,10 +102,13 @@ def main():
         if not tg or not tl:
             continue
         roles = {norm(k): v for k, v in tl.get("roles", {}).items()}
-        role = roles.get(norm(p["name"]))
+        role_keys = {norm(k): last(k) for k in tl.get("roles", {})}
+        rk = lookup(p["name"], p["team"], role_keys)
+        role = roles.get(rk) if rk else None
         if not role:
             continue
-        pp1 = norm(p["name"]) in {norm(x) for x in tl.get("pp1", [])}
+        pp_keys = {norm(k): last(k) for k in tl.get("pp1", [])}
+        pp1 = lookup(p["name"], p["team"], pp_keys) is not None
         # jen top-6 útočníků a top-4 obránců s PP1
         if role in ("L3", "L4") or (role.startswith("D") and not pp1):
             continue
