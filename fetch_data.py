@@ -93,6 +93,18 @@ def main():
             "ga_pg": round(ga / gp, 3) if gp else None,
             "b2b": ab in played_yday,
         }
+    # Střely proti: součet shotsAgainst brankářů týmu / odehrané zápasy (všechny týmy, kvůli průměru ligy)
+    club_cache = {}
+    for ab, t in teams.items():
+        cs = get(f"/club-stats/{ab}/now") or {}
+        club_cache[ab] = cs
+        sa = sum(gk.get("shotsAgainst", 0) or 0 for gk in cs.get("goalies", []))
+        t["sa"] = sa
+        t["sa_pg"] = round(sa / t["gp"], 3) if t["gp"] else None
+        time.sleep(0.1)
+    sa_gp = sum(t["gp"] for t in teams.values() if t.get("sa"))
+    league_sa_pg = round(sum(t.get("sa", 0) for t in teams.values()) / sa_gp, 3) if sa_gp else 28.5
+
     gp_sum = sum(t["gp"] for t in teams.values())
     league_ga_pg = round(sum(t["ga"] for t in teams.values()) / gp_sum, 3) if gp_sum else 3.0
 
@@ -101,7 +113,7 @@ def main():
         start = datetime.fromisoformat(g["startTimeUTC"].replace("Z", "+00:00"))
         a, h = g["awayTeam"], g["homeTeam"]
         for t in (a, h):
-            teams.setdefault(t["abbrev"], {"name": team_name(t), "gp": 0, "ga": 0, "ga_pg": None, "b2b": t["abbrev"] in played_yday})
+            teams.setdefault(t["abbrev"], {"name": team_name(t), "gp": 0, "ga": 0, "ga_pg": None, "sa": 0, "sa_pg": None, "b2b": t["abbrev"] in played_yday})
         out_games.append({
             "id": g["id"],
             "start_utc": g["startTimeUTC"],
@@ -114,7 +126,7 @@ def main():
     # Hráči týmů, které dnes hrají
     players = []
     for ab in sorted({x for g in out_games for x in (g["away"], g["home"])}):
-        cs = get(f"/club-stats/{ab}/now") or {}
+        cs = club_cache.get(ab) or get(f"/club-stats/{ab}/now") or {}
         for sk in cs.get("skaters", []):
             pid = sk["playerId"]
             name = f'{sk["firstName"]["default"]} {sk["lastName"]["default"]}'
@@ -127,13 +139,14 @@ def main():
             last_tois = [t for t in last_tois if t is not None]
 
             landing = get(f"/player/{pid}/landing") or {}
-            prev = {"gp": 0, "g": 0, "a": 0, "pts": 0}
+            prev = {"gp": 0, "g": 0, "a": 0, "pts": 0, "sog": 0}
             for s in landing.get("seasonTotals", []):
                 if str(s.get("season")) == prev_season and s.get("leagueAbbrev") == "NHL" and s.get("gameTypeId") == 2:
                     prev["gp"] += s.get("gamesPlayed", 0)
                     prev["g"] += s.get("goals", 0)
                     prev["a"] += s.get("assists", 0)
                     prev["pts"] += s.get("points", 0)
+                    prev["sog"] += s.get("shots", 0) or 0
 
             players.append({
                 "id": pid,
@@ -145,6 +158,7 @@ def main():
                     "g": sk.get("goals", 0),
                     "a": sk.get("assists", 0),
                     "pts": sk.get("points", 0),
+                    "sog": sk.get("shots", 0) or 0,
                     "ppp": sk.get("powerPlayGoals", 0),  # PP góly (club-stats nemá PPP vždy)
                     "toi_avg": round(sum(tois) / len(tois), 2) if tois else None,
                 },
@@ -153,6 +167,7 @@ def main():
                     "g": sum(x.get("goals", 0) for x in last),
                     "a": sum(x.get("assists", 0) for x in last),
                     "pts": sum(x.get("points", 0) for x in last),
+                    "sog": sum(x.get("shots", 0) or 0 for x in last),
                     "ppp": sum(x.get("powerPlayPoints", 0) for x in last),
                     "toi_avg": round(sum(last_tois) / len(last_tois), 2) if last_tois else None,
                     "dates": [x.get("gameDate") for x in last],
@@ -176,6 +191,7 @@ def main():
                         "g": p.get("goals", 0),
                         "a": p.get("assists", 0),
                         "pts": p.get("points", 0),
+                        "sog": p.get("sog", p.get("shots", 0)) or 0,
                     })
         results.append({
             "id": g["id"],
@@ -190,6 +206,7 @@ def main():
         "generated_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "season": cur_season,
         "league_ga_pg": league_ga_pg,
+        "league_sa_pg": league_sa_pg,
         "games": out_games,
         "teams": teams,
         "players": players,
