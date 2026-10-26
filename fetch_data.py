@@ -1,0 +1,206 @@
+"""Stáhne z NHL API data pro dnešní noc a vyhodnocení včerejška.
+
+Výstup: data/<YYYY-MM-DD>.json a data/latest.json
+Datum = dnešní datum v Praze; zápasy s tímto datem (US) se hrají v noci SEČ.
+Spouští GitHub Action každé ráno. Jen standardní knihovna.
+"""
+import json
+import os
+import sys
+import time
+import urllib.error
+import urllib.request
+from datetime import datetime, timedelta, timezone
+from zoneinfo import ZoneInfo
+
+API = "https://api-web.nhle.com/v1"
+PRAGUE = ZoneInfo("Europe/Prague")
+FORM_GAMES = 5
+
+
+def get(path, retries=3):
+    url = f"{API}{path}"
+    for attempt in range(retries):
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "nhl-player-props/1.0"})
+            with urllib.request.urlopen(req, timeout=30) as r:
+                return json.load(r)
+        except (urllib.error.URLError, TimeoutError) as e:
+            if attempt == retries - 1:
+                print(f"WARN {url}: {e}", file=sys.stderr)
+                return None
+            time.sleep(2 * (attempt + 1))
+    return None
+
+
+def toi_to_min(s):
+    if not s:
+        return None
+    try:
+        m, sec = s.split(":")
+        return int(m) + int(sec) / 60
+    except ValueError:
+        return None
+
+
+def season_id(d):
+    start = d.year if d.month >= 9 else d.year - 1
+    return f"{start}{start + 1}"
+
+
+def games_on(date_str):
+    data = get(f"/schedule/{date_str}") or {}
+    for day in data.get("gameWeek", []):
+        if day.get("date") == date_str:
+            return [g for g in day.get("games", []) if g.get("gameType") == 2]
+    return []
+
+
+def team_name(t):
+    place = (t.get("placeName") or {}).get("default", "")
+    common = (t.get("commonName") or {}).get("default", "")
+    return f"{place} {common}".strip() or t.get("abbrev")
+
+
+def main():
+    today = datetime.now(PRAGUE).date()
+    if len(sys.argv) > 1:
+        today = datetime.strptime(sys.argv[1], "%Y-%m-%d").date()
+    yesterday = today - timedelta(days=1)
+    t_str, y_str = today.isoformat(), yesterday.isoformat()
+    cur_season = season_id(today)
+    prev_season = str(int(cur_season[:4]) - 1) + cur_season[:4]
+
+    # Zápasy dnes a včera (včera = vyhodnocení + back-to-back)
+    games_today = games_on(t_str)
+    games_yday = games_on(y_str)
+    played_yday = set()
+    for g in games_yday:
+        played_yday.add(g["awayTeam"]["abbrev"])
+        played_yday.add(g["homeTeam"]["abbrev"])
+
+    # Tabulka: obdržené góly, plné názvy
+    teams = {}
+    st = get("/standings/now") or {}
+    for row in st.get("standings", []):
+        ab = row["teamAbbrev"]["default"]
+        gp = row.get("gamesPlayed") or 0
+        ga = row.get("goalAgainst") or 0
+        teams[ab] = {
+            "name": row["teamName"]["default"],
+            "gp": gp,
+            "ga": ga,
+            "ga_pg": round(ga / gp, 3) if gp else None,
+            "b2b": ab in played_yday,
+        }
+    gp_sum = sum(t["gp"] for t in teams.values())
+    league_ga_pg = round(sum(t["ga"] for t in teams.values()) / gp_sum, 3) if gp_sum else 3.0
+
+    out_games = []
+    for g in games_today:
+        start = datetime.fromisoformat(g["startTimeUTC"].replace("Z", "+00:00"))
+        a, h = g["awayTeam"], g["homeTeam"]
+        for t in (a, h):
+            teams.setdefault(t["abbrev"], {"name": team_name(t), "gp": 0, "ga": 0, "ga_pg": None, "b2b": t["abbrev"] in played_yday})
+        out_games.append({
+            "id": g["id"],
+            "start_utc": g["startTimeUTC"],
+            "start_prague": start.astimezone(PRAGUE).strftime("%H:%M"),
+            "date_prague": start.astimezone(PRAGUE).date().isoformat(),
+            "away": a["abbrev"],
+            "home": h["abbrev"],
+        })
+
+    # Hráči týmů, které dnes hrají
+    players = []
+    for ab in sorted({x for g in out_games for x in (g["away"], g["home"])}):
+        cs = get(f"/club-stats/{ab}/now") or {}
+        for sk in cs.get("skaters", []):
+            pid = sk["playerId"]
+            name = f'{sk["firstName"]["default"]} {sk["lastName"]["default"]}'
+            gl = get(f"/player/{pid}/game-log/{cur_season}/2") or {}
+            log = gl.get("gameLog", [])  # nejnovější první
+            last = log[:FORM_GAMES]
+            tois = [toi_to_min(x.get("toi")) for x in log]
+            tois = [t for t in tois if t is not None]
+            last_tois = [toi_to_min(x.get("toi")) for x in last]
+            last_tois = [t for t in last_tois if t is not None]
+
+            landing = get(f"/player/{pid}/landing") or {}
+            prev = {"gp": 0, "g": 0, "a": 0, "pts": 0}
+            for s in landing.get("seasonTotals", []):
+                if str(s.get("season")) == prev_season and s.get("leagueAbbrev") == "NHL" and s.get("gameTypeId") == 2:
+                    prev["gp"] += s.get("gamesPlayed", 0)
+                    prev["g"] += s.get("goals", 0)
+                    prev["a"] += s.get("assists", 0)
+                    prev["pts"] += s.get("points", 0)
+
+            players.append({
+                "id": pid,
+                "name": name,
+                "team": ab,
+                "pos": sk.get("positionCode"),
+                "cur": {
+                    "gp": sk.get("gamesPlayed", 0),
+                    "g": sk.get("goals", 0),
+                    "a": sk.get("assists", 0),
+                    "pts": sk.get("points", 0),
+                    "ppp": sk.get("powerPlayGoals", 0),  # PP góly (club-stats nemá PPP vždy)
+                    "toi_avg": round(sum(tois) / len(tois), 2) if tois else None,
+                },
+                "last": {
+                    "gp": len(last),
+                    "g": sum(x.get("goals", 0) for x in last),
+                    "a": sum(x.get("assists", 0) for x in last),
+                    "pts": sum(x.get("points", 0) for x in last),
+                    "ppp": sum(x.get("powerPlayPoints", 0) for x in last),
+                    "toi_avg": round(sum(last_tois) / len(last_tois), 2) if last_tois else None,
+                    "dates": [x.get("gameDate") for x in last],
+                },
+                "prev": prev,
+            })
+            time.sleep(0.15)
+
+    # Výsledky včerejška (pro vyhodnocení trackeru)
+    results = []
+    for g in games_yday:
+        bs = get(f"/gamecenter/{g['id']}/boxscore") or {}
+        pbg = bs.get("playerByGameStats", {})
+        rows = []
+        for side in ("awayTeam", "homeTeam"):
+            for grp in ("forwards", "defense"):
+                for p in pbg.get(side, {}).get(grp, []):
+                    rows.append({
+                        "id": p.get("playerId"),
+                        "name": (p.get("name") or {}).get("default"),
+                        "g": p.get("goals", 0),
+                        "a": p.get("assists", 0),
+                        "pts": p.get("points", 0),
+                    })
+        results.append({
+            "id": g["id"],
+            "away": g["awayTeam"]["abbrev"],
+            "home": g["homeTeam"]["abbrev"],
+            "state": bs.get("gameState"),
+            "players": rows,
+        })
+
+    payload = {
+        "date": t_str,
+        "generated_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "season": cur_season,
+        "league_ga_pg": league_ga_pg,
+        "games": out_games,
+        "teams": teams,
+        "players": players,
+        "results_yesterday": {"date": y_str, "games": results},
+    }
+    os.makedirs("data", exist_ok=True)
+    for path in (f"data/{t_str}.json", "data/latest.json"):
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(payload, f, ensure_ascii=False, indent=1)
+    print(f"{t_str}: {len(out_games)} zápasů, {len(players)} hráčů, včera {len(results)} zápasů")
+
+
+if __name__ == "__main__":
+    main()
