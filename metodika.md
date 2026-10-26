@@ -74,13 +74,22 @@ Koeficient 0,97 koriguje přestřelení Poissona (overdispersion). Kalibrace po 
 
 ## 4. Vklad (uživatel ho určuje až podle kurzu)
 
-| EV = kurz × P − 1 | Vklad |
-|---|---|
-| kurz < 1,90 | nesázet |
-| < 8 % | nesázet |
-| 8–12 % | 4/10 |
-| 12–20 % | 5/10 |
-| > 20 % | 6/10 (strop; > 30 % = prověřit, jestli nechybí info o sestavě) |
+Podmínky: kurz ≥ 1,90 a EV = kurz × P − 1 ≥ 8 %, jinak nesázet.
+
+```
+Kelly = EV / (kurz − 1)
+vklad = round(Kelly × 25), omezeno na 3–6 jednotek z 10
+```
+
+| Příklad | Kelly | Vklad |
+|---|---|---|
+| kurz 2,00, EV 10 % | 0,10 | 3/10 |
+| kurz 2,00, EV 15 % | 0,15 | 4/10 |
+| kurz 2,00, EV 20 % | 0,20 | 5/10 |
+| kurz 2,00, EV 25 %+ | 0,25 | 6/10 |
+| kurz 3,00, EV 20 % | 0,10 | 3/10 |
+
+Vyšší kurz = větší rozptyl = menší vklad (stejná logika jako u tipéra). EV > 30 % prověřit, jestli nechybí info o sestavě.
 
 ## 5. Formát výstupu
 
