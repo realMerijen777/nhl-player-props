@@ -1,0 +1,4512 @@
+{
+ "date": "2026-11-26",
+ "generated_utc": "2026-11-26T13:46:55+00:00",
+ "season": "20262027",
+ "league_ga_pg": 3.19,
+ "league_sa_pg": 27.221,
+ "games": [],
+ "teams": {
+  "CAR": {
+   "name": "Carolina Hurricanes",
+   "gp": 25,
+   "ga": 56,
+   "ga_pg": 2.24,
+   "gf": 103,
+   "gf_pg": 4.12,
+   "b2b": true,
+   "sa": 550,
+   "sa_pg": 22.0
+  },
+  "MIN": {
+   "name": "Minnesota Wild",
+   "gp": 27,
+   "ga": 62,
+   "ga_pg": 2.296,
+   "gf": 98,
+   "gf_pg": 3.63,
+   "b2b": true,
+   "sa": 698,
+   "sa_pg": 25.852
+  },
+  "EDM": {
+   "name": "Edmonton Oilers",
+   "gp": 27,
+   "ga": 82,
+   "ga_pg": 3.037,
+   "gf": 104,
+   "gf_pg": 3.852,
+   "b2b": false,
+   "sa": 722,
+   "sa_pg": 26.741
+  },
+  "OTT": {
+   "name": "Ottawa Senators",
+   "gp": 26,
+   "ga": 76,
+   "ga_pg": 2.923,
+   "gf": 84,
+   "gf_pg": 3.231,
+   "b2b": true,
+   "sa": 677,
+   "sa_pg": 26.038
+  },
+  "VGK": {
+   "name": "Vegas Golden Knights",
+   "gp": 26,
+   "ga": 78,
+   "ga_pg": 3.0,
+   "gf": 90,
+   "gf_pg": 3.462,
+   "b2b": false,
+   "sa": 663,
+   "sa_pg": 25.5
+  },
+  "NJD": {
+   "name": "New Jersey Devils",
+   "gp": 25,
+   "ga": 77,
+   "ga_pg": 3.08,
+   "gf": 94,
+   "gf_pg": 3.76,
+   "b2b": true,
+   "sa": 638,
+   "sa_pg": 25.52
+  },
+  "TBL": {
+   "name": "Tampa Bay Lightning",
+   "gp": 24,
+   "ga": 71,
+   "ga_pg": 2.958,
+   "gf": 85,
+   "gf_pg": 3.542,
+   "b2b": true,
+   "sa": 603,
+   "sa_pg": 25.125
+  },
+  "DAL": {
+   "name": "Dallas Stars",
+   "gp": 24,
+   "ga": 59,
+   "ga_pg": 2.458,
+   "gf": 66,
+   "gf_pg": 2.75,
+   "b2b": true,
+   "sa": 580,
+   "sa_pg": 24.167
+  },
+  "MTL": {
+   "name": "Montréal Canadiens",
+   "gp": 26,
+   "ga": 79,
+   "ga_pg": 3.038,
+   "gf": 78,
+   "gf_pg": 3.0,
+   "b2b": true,
+   "sa": 721,
+   "sa_pg": 27.731
+  },
+  "COL": {
+   "name": "Colorado Avalanche",
+   "gp": 24,
+   "ga": 68,
+   "ga_pg": 2.833,
+   "gf": 96,
+   "gf_pg": 4.0,
+   "b2b": true,
+   "sa": 654,
+   "sa_pg": 27.25
+  },
+  "BOS": {
+   "name": "Boston Bruins",
+   "gp": 24,
+   "ga": 65,
+   "ga_pg": 2.708,
+   "gf": 85,
+   "gf_pg": 3.542,
+   "b2b": true,
+   "sa": 659,
+   "sa_pg": 27.458
+  },
+  "NSH": {
+   "name": "Nashville Predators",
+   "gp": 24,
+   "ga": 70,
+   "ga_pg": 2.917,
+   "gf": 74,
+   "gf_pg": 3.083,
+   "b2b": true,
+   "sa": 705,
+   "sa_pg": 29.375
+  },
+  "FLA": {
+   "name": "Florida Panthers",
+   "gp": 25,
+   "ga": 74,
+   "ga_pg": 2.96,
+   "gf": 81,
+   "gf_pg": 3.24,
+   "b2b": true,
+   "sa": 630,
+   "sa_pg": 25.2
+  },
+  "WPG": {
+   "name": "Winnipeg Jets",
+   "gp": 26,
+   "ga": 86,
+   "ga_pg": 3.308,
+   "gf": 83,
+   "gf_pg": 3.192,
+   "b2b": true,
+   "sa": 731,
+   "sa_pg": 28.115
+  },
+  "NYI": {
+   "name": "New York Islanders",
+   "gp": 24,
+   "ga": 69,
+   "ga_pg": 2.875,
+   "gf": 76,
+   "gf_pg": 3.167,
+   "b2b": true,
+   "sa": 674,
+   "sa_pg": 28.083
+  },
+  "STL": {
+   "name": "St. Louis Blues",
+   "gp": 25,
+   "ga": 80,
+   "ga_pg": 3.2,
+   "gf": 84,
+   "gf_pg": 3.36,
+   "b2b": true,
+   "sa": 740,
+   "sa_pg": 29.6
+  },
+  "UTA": {
+   "name": "Utah Mammoth",
+   "gp": 26,
+   "ga": 88,
+   "ga_pg": 3.385,
+   "gf": 86,
+   "gf_pg": 3.308,
+   "b2b": true,
+   "sa": 644,
+   "sa_pg": 24.769
+  },
+  "NYR": {
+   "name": "New York Rangers",
+   "gp": 24,
+   "ga": 68,
+   "ga_pg": 2.833,
+   "gf": 70,
+   "gf_pg": 2.917,
+   "b2b": true,
+   "sa": 644,
+   "sa_pg": 26.833
+  },
+  "BUF": {
+   "name": "Buffalo Sabres",
+   "gp": 25,
+   "ga": 84,
+   "ga_pg": 3.36,
+   "gf": 78,
+   "gf_pg": 3.12,
+   "b2b": true,
+   "sa": 698,
+   "sa_pg": 27.92
+  },
+  "ANA": {
+   "name": "Anaheim Ducks",
+   "gp": 26,
+   "ga": 95,
+   "ga_pg": 3.654,
+   "gf": 96,
+   "gf_pg": 3.692,
+   "b2b": true,
+   "sa": 665,
+   "sa_pg": 25.577
+  },
+  "CGY": {
+   "name": "Calgary Flames",
+   "gp": 26,
+   "ga": 89,
+   "ga_pg": 3.423,
+   "gf": 67,
+   "gf_pg": 2.577,
+   "b2b": true,
+   "sa": 762,
+   "sa_pg": 29.308
+  },
+  "PHI": {
+   "name": "Philadelphia Flyers",
+   "gp": 27,
+   "ga": 95,
+   "ga_pg": 3.519,
+   "gf": 70,
+   "gf_pg": 2.593,
+   "b2b": true,
+   "sa": 746,
+   "sa_pg": 27.63
+  },
+  "SJS": {
+   "name": "San Jose Sharks",
+   "gp": 27,
+   "ga": 101,
+   "ga_pg": 3.741,
+   "gf": 71,
+   "gf_pg": 2.63,
+   "b2b": true,
+   "sa": 819,
+   "sa_pg": 30.333
+  },
+  "SEA": {
+   "name": "Seattle Kraken",
+   "gp": 22,
+   "ga": 76,
+   "ga_pg": 3.455,
+   "gf": 71,
+   "gf_pg": 3.227,
+   "b2b": true,
+   "sa": 643,
+   "sa_pg": 29.227
+  },
+  "WSH": {
+   "name": "Washington Capitals",
+   "gp": 22,
+   "ga": 86,
+   "ga_pg": 3.909,
+   "gf": 79,
+   "gf_pg": 3.591,
+   "b2b": true,
+   "sa": 584,
+   "sa_pg": 26.545
+  },
+  "DET": {
+   "name": "Detroit Red Wings",
+   "gp": 24,
+   "ga": 72,
+   "ga_pg": 3.0,
+   "gf": 65,
+   "gf_pg": 2.708,
+   "b2b": true,
+   "sa": 627,
+   "sa_pg": 26.125
+  },
+  "TOR": {
+   "name": "Toronto Maple Leafs",
+   "gp": 26,
+   "ga": 92,
+   "ga_pg": 3.538,
+   "gf": 82,
+   "gf_pg": 3.154,
+   "b2b": false,
+   "sa": 742,
+   "sa_pg": 28.538
+  },
+  "CHI": {
+   "name": "Chicago Blackhawks",
+   "gp": 25,
+   "ga": 97,
+   "ga_pg": 3.88,
+   "gf": 67,
+   "gf_pg": 2.68,
+   "b2b": true,
+   "sa": 757,
+   "sa_pg": 30.28
+  },
+  "CBJ": {
+   "name": "Columbus Blue Jackets",
+   "gp": 23,
+   "ga": 74,
+   "ga_pg": 3.217,
+   "gf": 58,
+   "gf_pg": 2.522,
+   "b2b": true,
+   "sa": 643,
+   "sa_pg": 27.957
+  },
+  "LAK": {
+   "name": "Los Angeles Kings",
+   "gp": 22,
+   "ga": 71,
+   "ga_pg": 3.227,
+   "gf": 60,
+   "gf_pg": 2.727,
+   "b2b": false,
+   "sa": 600,
+   "sa_pg": 27.273
+  },
+  "PIT": {
+   "name": "Pittsburgh Penguins",
+   "gp": 24,
+   "ga": 87,
+   "ga_pg": 3.625,
+   "gf": 70,
+   "gf_pg": 2.917,
+   "b2b": true,
+   "sa": 670,
+   "sa_pg": 27.917
+  },
+  "VAN": {
+   "name": "Vancouver Canucks",
+   "gp": 27,
+   "ga": 119,
+   "ga_pg": 4.407,
+   "gf": 75,
+   "gf_pg": 2.778,
+   "b2b": true,
+   "sa": 833,
+   "sa_pg": 30.852
+  }
+ },
+ "players": [],
+ "results_yesterday": {
+  "date": "2026-11-25",
+  "games": [
+   {
+    "id": 2026020386,
+    "away": "WPG",
+    "home": "BOS",
+    "state": "OFF",
+    "players": [
+     {
+      "id": 8480113,
+      "name": "A. Iafallo",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8480014,
+      "name": "G. Vilardi",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8476392,
+      "name": "A. Lowry",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 4
+     },
+     {
+      "id": 8482110,
+      "name": "D. Mercer",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 0
+     },
+     {
+      "id": 8484242,
+      "name": "B. Yager",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8480289,
+      "name": "M. Barron",
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "sog": 1
+     },
+     {
+      "id": 8481043,
+      "name": "C. Koepke",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8476460,
+      "name": "M. Scheifele",
+      "g": 1,
+      "a": 1,
+      "pts": 2,
+      "sog": 1
+     },
+     {
+      "id": 8486025,
+      "name": "V. Björck",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8478398,
+      "name": "K. Connor",
+      "g": 1,
+      "a": 2,
+      "pts": 3,
+      "sog": 2
+     },
+     {
+      "id": 8482149,
+      "name": "C. Perfetti",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8480145,
+      "name": "N. Pionk",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8481567,
+      "name": "H. Thrun",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8479983,
+      "name": "M. Ferraro",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 1
+     },
+     {
+      "id": 8477504,
+      "name": "J. Morrissey",
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "sog": 2
+     },
+     {
+      "id": 8480049,
+      "name": "D. Samberg",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 0
+     },
+     {
+      "id": 8483510,
+      "name": "E. Salomonsson",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8482459,
+      "name": "T. Bauer",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8482175,
+      "name": "J. Peterka",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8479999,
+      "name": "C. Mittelstadt",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8478401,
+      "name": "P. Zacha",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 1
+     },
+     {
+      "id": 8477496,
+      "name": "E. Lindholm",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 3
+     },
+     {
+      "id": 8479987,
+      "name": "M. Geekie",
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "sog": 2
+     },
+     {
+      "id": 8480355,
+      "name": "M. Kastelic",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8483505,
+      "name": "M. Poitras",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8476374,
+      "name": "S. Kuraly",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8479661,
+      "name": "T. Jeannot",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8477956,
+      "name": "D. Pastrnak",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 1
+     },
+     {
+      "id": 8482177,
+      "name": "M. Khusnutdinov",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8483489,
+      "name": "F. Minten",
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "sog": 2
+     },
+     {
+      "id": 8482511,
+      "name": "M. Lohrei",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 4
+     },
+     {
+      "id": 8478840,
+      "name": "W. Borgen",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8476854,
+      "name": "H. Lindholm",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 4
+     },
+     {
+      "id": 8479325,
+      "name": "C. McAvoy",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8477365,
+      "name": "C. Clifton",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8477507,
+      "name": "N. Zadorov",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     }
+    ]
+   },
+   {
+    "id": 2026020387,
+    "away": "NYR",
+    "home": "BUF",
+    "state": "OFF",
+    "players": [
+     {
+      "id": 8476468,
+      "name": "J. Miller",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 4
+     },
+     {
+      "id": 8482109,
+      "name": "A. Lafrenière",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8479390,
+      "name": "T. Raddysh",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 0
+     },
+     {
+      "id": 8478446,
+      "name": "G. Gawdin",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 3
+     },
+     {
+      "id": 8480009,
+      "name": "E. Tolvanen",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8481789,
+      "name": "T. Kartye",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 5
+     },
+     {
+      "id": 8483690,
+      "name": "N. Laba",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8482877,
+      "name": "J. Chmelar",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8482157,
+      "name": "W. Cuylle",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8484136,
+      "name": "M. Sasson",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8476459,
+      "name": "M. Zibanejad",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8484210,
+      "name": "G. Perreault",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8482073,
+      "name": "B. Schneider",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8480434,
+      "name": "S. Durzi",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8479323,
+      "name": "A. Fox",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 2
+     },
+     {
+      "id": 8477969,
+      "name": "M. Pettersson",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8478882,
+      "name": "V. Gavrikov",
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "sog": 2
+     },
+     {
+      "id": 8482666,
+      "name": "S. Morrow",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8484145,
+      "name": "Z. Benson",
+      "g": 1,
+      "a": 1,
+      "pts": 2,
+      "sog": 1
+     },
+     {
+      "id": 8480064,
+      "name": "J. Norris",
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "sog": 1
+     },
+     {
+      "id": 8475842,
+      "name": "S. Carrick",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8475722,
+      "name": "J. Zucker",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 3
+     },
+     {
+      "id": 8481522,
+      "name": "P. Krebs",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 0
+     },
+     {
+      "id": 8483468,
+      "name": "J.Kulich",
+      "g": 1,
+      "a": 1,
+      "pts": 2,
+      "sog": 5
+     },
+     {
+      "id": 8482097,
+      "name": "J. Quinn",
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "sog": 4
+     },
+     {
+      "id": 8479359,
+      "name": "B. Malenstyn",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8480802,
+      "name": "R. McLeod",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8479420,
+      "name": "T. Thompson",
+      "g": 0,
+      "a": 2,
+      "pts": 2,
+      "sog": 2
+     },
+     {
+      "id": 8483500,
+      "name": "N. Ostlund",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 0
+     },
+     {
+      "id": 8482659,
+      "name": "J. Doan",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 1
+     },
+     {
+      "id": 8482803,
+      "name": "O. Zellweger",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8479982,
+      "name": "C. Timmins",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8480807,
+      "name": "M. Samuelsson",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 4
+     },
+     {
+      "id": 8482671,
+      "name": "O. Power",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8480839,
+      "name": "R. Dahlin",
+      "g": 1,
+      "a": 1,
+      "pts": 2,
+      "sog": 2
+     },
+     {
+      "id": 8481806,
+      "name": "L. Crevier",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     }
+    ]
+   },
+   {
+    "id": 2026020388,
+    "away": "CAR",
+    "home": "TBL",
+    "state": "OFF",
+    "players": [
+     {
+      "id": 8473533,
+      "name": "J. Staal",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 0
+     },
+     {
+      "id": 8478427,
+      "name": "S. Aho",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 2
+     },
+     {
+      "id": 8482702,
+      "name": "L. Stankoven",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8482093,
+      "name": "S. Jarvis",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 4
+     },
+     {
+      "id": 8477478,
+      "name": "W. Carrier",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8480830,
+      "name": "A. Svechnikov",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8476921,
+      "name": "J. Martinook",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8480762,
+      "name": "E. Robinson",
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "sog": 2
+     },
+     {
+      "id": 8482809,
+      "name": "J. Blake",
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "sog": 3
+     },
+     {
+      "id": 8475791,
+      "name": "T. Hall",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8476873,
+      "name": "M. Jankowski",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8480829,
+      "name": "J. Kotkaniemi",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8476906,
+      "name": "S. Gostisbehere",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8478970,
+      "name": "J. Chatfield",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8479976,
+      "name": "J. Välimäki",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8482100,
+      "name": "A. Nikishin",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 3
+     },
+     {
+      "id": 8480336,
+      "name": "S. Walker",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 4
+     },
+     {
+      "id": 8476958,
+      "name": "J. Slavin",
+      "g": 1,
+      "a": 1,
+      "pts": 2,
+      "sog": 2
+     },
+     {
+      "id": 8478010,
+      "name": "B. Point",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8484770,
+      "name": "S. O'Reilly",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8479705,
+      "name": "J. Viel",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8476878,
+      "name": "Z. Girgensons",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 4
+     },
+     {
+      "id": 8480995,
+      "name": "P. Holmberg",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8476826,
+      "name": "Y. Gourde",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8479542,
+      "name": "B. Hagel",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 3
+     },
+     {
+      "id": 8477404,
+      "name": "J. Guentzel",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 2
+     },
+     {
+      "id": 8478519,
+      "name": "A. Cirelli",
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "sog": 4
+     },
+     {
+      "id": 8476453,
+      "name": "N. Kucherov",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 3
+     },
+     {
+      "id": 8482201,
+      "name": "G. Goncalves",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8481624,
+      "name": "I. Mikheyev",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 3
+     },
+     {
+      "id": 8481719,
+      "name": "M. Crozier",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8474151,
+      "name": "R. McDonagh",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8480426,
+      "name": "C. D'Astous",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8474590,
+      "name": "J. Carlson",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8482929,
+      "name": "E. Lilleberg",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8482655,
+      "name": "J. Moser",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     }
+    ]
+   },
+   {
+    "id": 2026020389,
+    "away": "OTT",
+    "home": "FLA",
+    "state": "OFF",
+    "players": [
+     {
+      "id": 8481596,
+      "name": "S. Pinto",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8482116,
+      "name": "T. Stützle",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8480208,
+      "name": "D. Batherson",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8480188,
+      "name": "F. Zetterlund",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8476393,
+      "name": "N. Cousins",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8478020,
+      "name": "M. Amadio",
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "sog": 1
+     },
+     {
+      "id": 8481528,
+      "name": "D. Cozens",
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "sog": 6
+     },
+     {
+      "id": 8473512,
+      "name": "C. Giroux",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 3
+     },
+     {
+      "id": 8483676,
+      "name": "S. Halliday",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 3
+     },
+     {
+      "id": 8481577,
+      "name": "P. Tomasino",
+      "g": 1,
+      "a": 1,
+      "pts": 2,
+      "sog": 1
+     },
+     {
+      "id": 8482092,
+      "name": "R. Greig",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 2
+     },
+     {
+      "id": 8478104,
+      "name": "S. Blais",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8482245,
+      "name": "A. Zub",
+      "g": 0,
+      "a": 2,
+      "pts": 2,
+      "sog": 1
+     },
+     {
+      "id": 8481606,
+      "name": "J. Spence",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8484321,
+      "name": "N. Matinpalo",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8482095,
+      "name": "T. Kleven",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8478469,
+      "name": "T. Chabot",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 4
+     },
+     {
+      "id": 8482105,
+      "name": "J. Sanderson",
+      "g": 0,
+      "a": 2,
+      "pts": 2,
+      "sog": 0
+     },
+     {
+      "id": 8480801,
+      "name": "B. Tkachuk",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8477935,
+      "name": "S. Bennett",
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "sog": 1
+     },
+     {
+      "id": 8477933,
+      "name": "S. Reinhart",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 6
+     },
+     {
+      "id": 8482113,
+      "name": "A. Lundell",
+      "g": 1,
+      "a": 1,
+      "pts": 2,
+      "sog": 4
+     },
+     {
+      "id": 8477493,
+      "name": "A. Barkov",
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "sog": 2
+     },
+     {
+      "id": 8479314,
+      "name": "M. Tkachuk",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 2
+     },
+     {
+      "id": 8474189,
+      "name": "L. Eller",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8477903,
+      "name": "G. Hathaway",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8477409,
+      "name": "C. Verhaeghe",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 1
+     },
+     {
+      "id": 8480185,
+      "name": "E. Luostarinen",
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "sog": 1
+     },
+     {
+      "id": 8473419,
+      "name": "B. Marchand",
+      "g": 0,
+      "a": 3,
+      "pts": 3,
+      "sog": 6
+     },
+     {
+      "id": 8483771,
+      "name": "S. Vilmanis",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8477495,
+      "name": "S. Jones",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 3
+     },
+     {
+      "id": 8477932,
+      "name": "A. Ekblad",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8475462,
+      "name": "R. Gudas",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8475179,
+      "name": "D. Kulikov",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 1
+     },
+     {
+      "id": 8478055,
+      "name": "G. Forsling",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 0
+     },
+     {
+      "id": 8478859,
+      "name": "N. Mikkola",
+      "g": 1,
+      "a": 1,
+      "pts": 2,
+      "sog": 3
+     }
+    ]
+   },
+   {
+    "id": 2026020390,
+    "away": "STL",
+    "home": "NYI",
+    "state": "OFF",
+    "players": [
+     {
+      "id": 8480281,
+      "name": "A. Toropchenko",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 3
+     },
+     {
+      "id": 8484164,
+      "name": "D. Dvorsky",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8480023,
+      "name": "R. Thomas",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 2
+     },
+     {
+      "id": 8480459,
+      "name": "P. Suter",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8477573,
+      "name": "N. Walker",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8484230,
+      "name": "O. Stenberg",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 3
+     },
+     {
+      "id": 8481013,
+      "name": "J. Berggren",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8483463,
+      "name": "A. Kaskimaki",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8477527,
+      "name": "R. Johnston",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8482089,
+      "name": "J. Neighbours",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8482077,
+      "name": "D. Holloway",
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "sog": 3
+     },
+     {
+      "id": 8482745,
+      "name": "M. McTavish",
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "sog": 3
+     },
+     {
+      "id": 8481598,
+      "name": "P. Broberg",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8475764,
+      "name": "C. Fowler",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8482733,
+      "name": "L. Mailloux",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 2
+     },
+     {
+      "id": 8484790,
+      "name": "A. Jiricek",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8476892,
+      "name": "C. Parayko",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8482111,
+      "name": "J. Barron",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8475170,
+      "name": "B. Schenn",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 1
+     },
+     {
+      "id": 8477407,
+      "name": "A. Duclair",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8478445,
+      "name": "M. Barzal",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 3
+     },
+     {
+      "id": 8477500,
+      "name": "B. Horvat",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 2
+     },
+     {
+      "id": 8485388,
+      "name": "V. Eklund",
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "sog": 3
+     },
+     {
+      "id": 8476419,
+      "name": "J. Pageau",
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "sog": 3
+     },
+     {
+      "id": 8482476,
+      "name": "E. Heineman",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8475231,
+      "name": "C. Cizikas",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8481711,
+      "name": "M. Maccelli",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8484221,
+      "name": "C. Ritchie",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 0
+     },
+     {
+      "id": 8476292,
+      "name": "O. Palat",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8481601,
+      "name": "S. Holmstrom",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8476917,
+      "name": "A. Pelech",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8482516,
+      "name": "M. Kessel",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 1
+     },
+     {
+      "id": 8479378,
+      "name": "L. Stanley",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8485366,
+      "name": "M. Schaefer",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 5
+     },
+     {
+      "id": 8477018,
+      "name": "B. Hutton",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8477950,
+      "name": "T. DeAngelo",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 4
+     }
+    ]
+   },
+   {
+    "id": 2026020391,
+    "away": "CGY",
+    "home": "PIT",
+    "state": "OFF",
+    "players": [
+     {
+      "id": 8474150,
+      "name": "M. Backlund",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 2
+     },
+     {
+      "id": 8481068,
+      "name": "Y. Sharangovich",
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "sog": 2
+     },
+     {
+      "id": 8480259,
+      "name": "B. Jones",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8476458,
+      "name": "R. Strome",
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "sog": 3
+     },
+     {
+      "id": 8482679,
+      "name": "M. Coronato",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 2
+     },
+     {
+      "id": 8484154,
+      "name": "J. Castagna",
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "sog": 3
+     },
+     {
+      "id": 8483609,
+      "name": "A. Klapka",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 1
+     },
+     {
+      "id": 8484234,
+      "name": "A. Suniev",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8484958,
+      "name": "M. Tsyplakov",
+      "g": 1,
+      "a": 1,
+      "pts": 2,
+      "sog": 1
+     },
+     {
+      "id": 8482747,
+      "name": "B. Othmann",
+      "g": 1,
+      "a": 1,
+      "pts": 2,
+      "sog": 5
+     },
+     {
+      "id": 8480797,
+      "name": "J. Farabee",
+      "g": 1,
+      "a": 1,
+      "pts": 2,
+      "sog": 1
+     },
+     {
+      "id": 8484860,
+      "name": "M. Gridin",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8484768,
+      "name": "Z. Parekh",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 1
+     },
+     {
+      "id": 8480727,
+      "name": "Z. Whitecloud",
+      "g": 0,
+      "a": 2,
+      "pts": 2,
+      "sog": 2
+     },
+     {
+      "id": 8482165,
+      "name": "Y. Kuznetsov",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8477810,
+      "name": "J. Hanley",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 0
+     },
+     {
+      "id": 8478136,
+      "name": "J. Middleton",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 0
+     },
+     {
+      "id": 8483495,
+      "name": "S. Nemec",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 0
+     },
+     {
+      "id": 8483487,
+      "name": "R. McGroarty",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8479638,
+      "name": "J. Brazeau",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8478438,
+      "name": "T. Novak",
+      "g": 1,
+      "a": 1,
+      "pts": 2,
+      "sog": 2
+     },
+     {
+      "id": 8480980,
+      "name": "C. Dewar",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8482148,
+      "name": "H. Lapierre",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8482758,
+      "name": "V. Koivunen",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8481481,
+      "name": "B. Lizotte",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8476483,
+      "name": "R. Rakell",
+      "g": 1,
+      "a": 1,
+      "pts": 2,
+      "sog": 5
+     },
+     {
+      "id": 8471215,
+      "name": "E. Malkin",
+      "g": 1,
+      "a": 1,
+      "pts": 2,
+      "sog": 2
+     },
+     {
+      "id": 8485414,
+      "name": "B. Kindel",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 4
+     },
+     {
+      "id": 8482993,
+      "name": "A. Hayes",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8471675,
+      "name": "S. Crosby",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8481527,
+      "name": "K. Korczak",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 2
+     },
+     {
+      "id": 8481056,
+      "name": "S. Stastney",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8479398,
+      "name": "S. Girard",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8477845,
+      "name": "T. van Riemsdyk",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8471724,
+      "name": "K. Letang",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8474578,
+      "name": "E. Karlsson",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 2
+     }
+    ]
+   },
+   {
+    "id": 2026020392,
+    "away": "PHI",
+    "home": "WSH",
+    "state": "OFF",
+    "players": [
+     {
+      "id": 8478439,
+      "name": "T. Konecny",
+      "g": 1,
+      "a": 1,
+      "pts": 2,
+      "sog": 3
+     },
+     {
+      "id": 8476461,
+      "name": "S. Couturier",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8477989,
+      "name": "C. Dvorak",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 2
+     },
+     {
+      "id": 8480220,
+      "name": "N. Cates",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8484387,
+      "name": "M. Michkov",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8481533,
+      "name": "T. Zegras",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8478569,
+      "name": "N. Acciari",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8483787,
+      "name": "C. Knuble",
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "sog": 2
+     },
+     {
+      "id": 8482159,
+      "name": "T. Foerster",
+      "g": 0,
+      "a": 2,
+      "pts": 2,
+      "sog": 2
+     },
+     {
+      "id": 8480015,
+      "name": "O. Tippett",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 3
+     },
+     {
+      "id": 8484142,
+      "name": "D. Barkey",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8485406,
+      "name": "P. Martone",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 0
+     },
+     {
+      "id": 8477948,
+      "name": "T. Sanheim",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8481546,
+      "name": "C. York",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8482142,
+      "name": "J. Drysdale",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8476372,
+      "name": "N. Seeler",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8477499,
+      "name": "R. Ristolainen",
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "sog": 2
+     },
+     {
+      "id": 8484148,
+      "name": "O. Bonk",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8471214,
+      "name": "A. Ovechkin",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8484186,
+      "name": "R. Leonard",
+      "g": 1,
+      "a": 1,
+      "pts": 2,
+      "sog": 5
+     },
+     {
+      "id": 8478440,
+      "name": "D. Strome",
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "sog": 1
+     },
+     {
+      "id": 8481656,
+      "name": "A. Protas",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 5
+     },
+     {
+      "id": 8476432,
+      "name": "B. Jenner",
+      "g": 1,
+      "a": 1,
+      "pts": 2,
+      "sog": 4
+     },
+     {
+      "id": 8482088,
+      "name": "J. Sourdif",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 1
+     },
+     {
+      "id": 8476880,
+      "name": "T. Wilson",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 3
+     },
+     {
+      "id": 8484999,
+      "name": "I. Protas",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8483491,
+      "name": "I. Miroshnichenko",
+      "g": 1,
+      "a": 1,
+      "pts": 2,
+      "sog": 1
+     },
+     {
+      "id": 8478463,
+      "name": "A. Beauvillier",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 1
+     },
+     {
+      "id": 8479400,
+      "name": "P. Dubois",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 3
+     },
+     {
+      "id": 8477949,
+      "name": "A. Tuch",
+      "g": 1,
+      "a": 2,
+      "pts": 3,
+      "sog": 2
+     },
+     {
+      "id": 8478911,
+      "name": "M. Roy",
+      "g": 1,
+      "a": 1,
+      "pts": 2,
+      "sog": 2
+     },
+     {
+      "id": 8479345,
+      "name": "J. Chychrun",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 2
+     },
+     {
+      "id": 8480043,
+      "name": "T. Liljegren",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 0
+     },
+     {
+      "id": 8481030,
+      "name": "J. St. Ivany",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8480796,
+      "name": "M. Fehérváry",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 0
+     },
+     {
+      "id": 8484873,
+      "name": "C. Hutson",
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "sog": 4
+     }
+    ]
+   },
+   {
+    "id": 2026020393,
+    "away": "NJD",
+    "home": "CBJ",
+    "state": "OFF",
+    "players": [
+     {
+      "id": 8476474,
+      "name": "S. Noesen",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8479996,
+      "name": "C. Glass",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8480002,
+      "name": "N. Hischier",
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "sog": 2
+     },
+     {
+      "id": 8477015,
+      "name": "C. Brown",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8478542,
+      "name": "E. Rodrigues",
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "sog": 2
+     },
+     {
+      "id": 8478414,
+      "name": "T. Meier",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8479407,
+      "name": "J. Bratt",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 1
+     },
+     {
+      "id": 8480003,
+      "name": "J. Boqvist",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8482146,
+      "name": "L. Evangelista",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8481721,
+      "name": "A. Gritsyuk",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 0
+     },
+     {
+      "id": 8481559,
+      "name": "J. Hughes",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 5
+     },
+     {
+      "id": 8483695,
+      "name": "A. Lombardi",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8475455,
+      "name": "B. Dillon",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8476462,
+      "name": "D. Hamilton",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 3
+     },
+     {
+      "id": 8477488,
+      "name": "B. Pesce",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 1
+     },
+     {
+      "id": 8482684,
+      "name": "L. Hughes",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8480990,
+      "name": "D. Chisholm",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8478399,
+      "name": "J. Siegenthaler",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 3
+     },
+     {
+      "id": 8475745,
+      "name": "C. Coyle",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8482705,
+      "name": "C. Sillinger",
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "sog": 2
+     },
+     {
+      "id": 8484166,
+      "name": "A. Fantilli",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8480806,
+      "name": "I. Lundestrom",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8477497,
+      "name": "S. Monahan",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 0
+     },
+     {
+      "id": 8477501,
+      "name": "V. Nichushkin",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 3
+     },
+     {
+      "id": 8482451,
+      "name": "M. Pyyhtia",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8482720,
+      "name": "M. Knies",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 3
+     },
+     {
+      "id": 8482660,
+      "name": "K. Johnson",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 3
+     },
+     {
+      "id": 8485469,
+      "name": "J. Williams",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8483432,
+      "name": "L. Del Bel Belluz",
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "sog": 1
+     },
+     {
+      "id": 8479066,
+      "name": "R. Lomberg",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8481161,
+      "name": "J. Christiansen",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 1
+     },
+     {
+      "id": 8483485,
+      "name": "D. Mateychuk",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8478460,
+      "name": "Z. Werenski",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8478500,
+      "name": "I. Provorov",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 3
+     },
+     {
+      "id": 8479371,
+      "name": "D. Fabbro",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8476923,
+      "name": "D. Severson",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     }
+    ]
+   },
+   {
+    "id": 2026020394,
+    "away": "VAN",
+    "home": "DET",
+    "state": "OFF",
+    "players": [
+     {
+      "id": 8478444,
+      "name": "B. Boeser",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8482055,
+      "name": "D. O'Connor",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8482079,
+      "name": "M. Rossi",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 3
+     },
+     {
+      "id": 8481133,
+      "name": "C. Reinhardt",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 0
+     },
+     {
+      "id": 8484406,
+      "name": "T. Mueller",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8481032,
+      "name": "P. Cotter",
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "sog": 2
+     },
+     {
+      "id": 8484901,
+      "name": "J. Quillan",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 1
+     },
+     {
+      "id": 8478498,
+      "name": "J. DeBrusk",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8480078,
+      "name": "F. Chytil",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8483476,
+      "name": "J. Lekkerimäki",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8483499,
+      "name": "L. Ohgren",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 3
+     },
+     {
+      "id": 8481024,
+      "name": "L. Karlsson",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 4
+     },
+     {
+      "id": 8474568,
+      "name": "L. Schenn",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8476467,
+      "name": "J. Oleksiak",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8484240,
+      "name": "T. Willander",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8484798,
+      "name": "Z. Buium",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8479425,
+      "name": "F. Hronek",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8483678,
+      "name": "E. Pettersson",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8481523,
+      "name": "K. Dach",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8477429,
+      "name": "A. Copp",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8478891,
+      "name": "M. Appleton",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 3
+     },
+     {
+      "id": 8482078,
+      "name": "L. Raymond",
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "sog": 3
+     },
+     {
+      "id": 8479992,
+      "name": "M. Rasmussen",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8484794,
+      "name": "M. Brandsegg-Nygård",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 0
+     },
+     {
+      "id": 8478042,
+      "name": "V. Arvidsson",
+      "g": 1,
+      "a": 2,
+      "pts": 3,
+      "sog": 2
+     },
+     {
+      "id": 8477456,
+      "name": "J. Compher",
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "sog": 2
+     },
+     {
+      "id": 8478434,
+      "name": "K. Kolesar",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8484471,
+      "name": "E. Finnie",
+      "g": 2,
+      "a": 1,
+      "pts": 3,
+      "sog": 2
+     },
+     {
+      "id": 8483464,
+      "name": "M. Kasper",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 1
+     },
+     {
+      "id": 8479337,
+      "name": "A. DeBrincat",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8475279,
+      "name": "B. Chiarot",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8481607,
+      "name": "A. Johansson",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8477971,
+      "name": "A. Englund",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8483679,
+      "name": "A. Johansson",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8481542,
+      "name": "M. Seider",
+      "g": 0,
+      "a": 2,
+      "pts": 2,
+      "sog": 1
+     },
+     {
+      "id": 8475753,
+      "name": "J. Faulk",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 3
+     }
+    ]
+   },
+   {
+    "id": 2026020395,
+    "away": "NSH",
+    "home": "DAL",
+    "state": "OFF",
+    "players": [
+     {
+      "id": 8476887,
+      "name": "F. Forsberg",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 3
+     },
+     {
+      "id": 8477021,
+      "name": "A. Kerfoot",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8483524,
+      "name": "S. Wright",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8480835,
+      "name": "J. Drury",
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "sog": 3
+     },
+     {
+      "id": 8481535,
+      "name": "N. Hoglander",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8482145,
+      "name": "M. Bourque",
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "sog": 4
+     },
+     {
+      "id": 8483513,
+      "name": "R. Schaefer",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8479525,
+      "name": "R. Colton",
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "sog": 1
+     },
+     {
+      "id": 8476539,
+      "name": "J. Marchessault",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8481726,
+      "name": "A. Edstrom",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8475158,
+      "name": "R. O'Reilly",
+      "g": 0,
+      "a": 2,
+      "pts": 2,
+      "sog": 1
+     },
+     {
+      "id": 8474564,
+      "name": "S. Stamkos",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8482482,
+      "name": "A. Wilsby",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8481593,
+      "name": "J. Struble",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 0
+     },
+     {
+      "id": 8479980,
+      "name": "N. Hague",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8480246,
+      "name": "N. Perbix",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8474600,
+      "name": "R. Josi",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 3
+     },
+     {
+      "id": 8476869,
+      "name": "B. Skjei",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 1
+     },
+     {
+      "id": 8476889,
+      "name": "R. Faksa",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8473994,
+      "name": "J. Benn",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8474102,
+      "name": "D. Perron",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8479351,
+      "name": "S. Steel",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8480027,
+      "name": "J. Robertson",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8481641,
+      "name": "J. Kiviranta",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8478449,
+      "name": "R. Hintz",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8484938,
+      "name": "A. Hyry",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8484829,
+      "name": "J. Hryckowian",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8482740,
+      "name": "W. Johnston",
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "sog": 2
+     },
+     {
+      "id": 8475794,
+      "name": "T. Seguin",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 4
+     },
+     {
+      "id": 8478420,
+      "name": "M. Rantanen",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8480036,
+      "name": "M. Heiskanen",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8480878,
+      "name": "N. Lundkvist",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8476902,
+      "name": "E. Lindell",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8477335,
+      "name": "K. Burroughs",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8481581,
+      "name": "T. Harley",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8474574,
+      "name": "T. Myers",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     }
+    ]
+   },
+   {
+    "id": 2026020396,
+    "away": "UTA",
+    "home": "MIN",
+    "state": "OFF",
+    "players": [
+     {
+      "id": 8479343,
+      "name": "C. Keller",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8482699,
+      "name": "D. Guenther",
+      "g": 1,
+      "a": 1,
+      "pts": 2,
+      "sog": 3
+     },
+     {
+      "id": 8476389,
+      "name": "V. Trocheck",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 2
+     },
+     {
+      "id": 8480855,
+      "name": "J. McBain",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8480849,
+      "name": "B. Hayton",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8477070,
+      "name": "L. O'Brien",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8484388,
+      "name": "D. But",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 0
+     },
+     {
+      "id": 8479977,
+      "name": "K. Yamamoto",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8478474,
+      "name": "L. Crouse",
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "sog": 1
+     },
+     {
+      "id": 8475314,
+      "name": "A. Lee",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 5
+     },
+     {
+      "id": 8478831,
+      "name": "K. Stenlund",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8483431,
+      "name": "L. Cooley",
+      "g": 1,
+      "a": 1,
+      "pts": 2,
+      "sog": 1
+     },
+     {
+      "id": 8481708,
+      "name": "Z. Jones",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8479369,
+      "name": "A. Peeke",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 2
+     },
+     {
+      "id": 8484386,
+      "name": "D. Simashev",
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "sog": 2
+     },
+     {
+      "id": 8477346,
+      "name": "M. Weegar",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8480084,
+      "name": "N. DeSimone",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8479410,
+      "name": "M. Sergachev",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 2
+     },
+     {
+      "id": 8481553,
+      "name": "B. Brink",
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "sog": 1
+     },
+     {
+      "id": 8481557,
+      "name": "M. Boldy",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 3
+     },
+     {
+      "id": 8478508,
+      "name": "Y. Trenin",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 0
+     },
+     {
+      "id": 8478493,
+      "name": "J. Eriksson Ek",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 5
+     },
+     {
+      "id": 8475220,
+      "name": "M. Foligno",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8476399,
+      "name": "B. Coleman",
+      "g": 2,
+      "a": 0,
+      "pts": 2,
+      "sog": 4
+     },
+     {
+      "id": 8483525,
+      "name": "D. Yurov",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 3
+     },
+     {
+      "id": 8477451,
+      "name": "R. Hartman",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8477446,
+      "name": "M. McCarron",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 0
+     },
+     {
+      "id": 8485702,
+      "name": "M. Shabanov",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8473422,
+      "name": "N. Foligno",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8478864,
+      "name": "K. Kaprizov",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 3
+     },
+     {
+      "id": 8482122,
+      "name": "B. Faber",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8474567,
+      "name": "Z. Bogosian",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8476463,
+      "name": "J. Brodin",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 1
+     },
+     {
+      "id": 8482641,
+      "name": "M. Kiersted",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8474716,
+      "name": "J. Spurgeon",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8483766,
+      "name": "D. Spacek",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     }
+    ]
+   },
+   {
+    "id": 2026020397,
+    "away": "MTL",
+    "home": "COL",
+    "state": "OFF",
+    "players": [
+     {
+      "id": 8481540,
+      "name": "C. Caufield",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8480018,
+      "name": "N. Suzuki",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8481618,
+      "name": "A. Newhook",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8483515,
+      "name": "J. Slafkovský",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8476479,
+      "name": "P. Danault",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8483424,
+      "name": "O. Beck",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8484403,
+      "name": "F. Xhekaj",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8478133,
+      "name": "J. Evans",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8482737,
+      "name": "Z. Bolduc",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8480074,
+      "name": "A. Texier",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 5
+     },
+     {
+      "id": 8477946,
+      "name": "D. Larkin",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 4
+     },
+     {
+      "id": 8482775,
+      "name": "O. Kapanen",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8482087,
+      "name": "K. Guhle",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8483686,
+      "name": "A. Engstrom",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8478851,
+      "name": "A. Carrier",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8483457,
+      "name": "L. Hutson",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8480865,
+      "name": "N. Dobson",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8482964,
+      "name": "A. Xhekaj",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 3
+     },
+     {
+      "id": 8482768,
+      "name": "F. Svechkov",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8478462,
+      "name": "N. Roy",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 3
+     },
+     {
+      "id": 8475754,
+      "name": "B. Nelson",
+      "g": 0,
+      "a": 2,
+      "pts": 2,
+      "sog": 5
+     },
+     {
+      "id": 8486171,
+      "name": "T. Hughes",
+      "g": 0,
+      "a": 2,
+      "pts": 2,
+      "sog": 3
+     },
+     {
+      "id": 8480448,
+      "name": "P. Kelly",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8481186,
+      "name": "L. O'Connor",
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "sog": 2
+     },
+     {
+      "id": 8481550,
+      "name": "A. Beckman",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 1
+     },
+     {
+      "id": 8477476,
+      "name": "A. Lehkonen",
+      "g": 1,
+      "a": 1,
+      "pts": 2,
+      "sog": 2
+     },
+     {
+      "id": 8475768,
+      "name": "J. Schwartz",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8480039,
+      "name": "M. Necas",
+      "g": 1,
+      "a": 2,
+      "pts": 3,
+      "sog": 5
+     },
+     {
+      "id": 8475172,
+      "name": "N. Kadri",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8476455,
+      "name": "G. Landeskog",
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "sog": 2
+     },
+     {
+      "id": 8476422,
+      "name": "M. Reilly",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8478038,
+      "name": "D. Toews",
+      "g": 2,
+      "a": 0,
+      "pts": 2,
+      "sog": 3
+     },
+     {
+      "id": 8480069,
+      "name": "C. Makar",
+      "g": 0,
+      "a": 3,
+      "pts": 3,
+      "sog": 4
+     },
+     {
+      "id": 8476967,
+      "name": "B. Kulak",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8484258,
+      "name": "S. Malinski",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 1
+     },
+     {
+      "id": 8470613,
+      "name": "B. Burns",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     }
+    ]
+   },
+   {
+    "id": 2026020399,
+    "away": "CHI",
+    "home": "SEA",
+    "state": "OFF",
+    "players": [
+     {
+      "id": 8477987,
+      "name": "R. Donato",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8484197,
+      "name": "O. Moore",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8478413,
+      "name": "J. Greenway",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 1
+     },
+     {
+      "id": 8485391,
+      "name": "A. Frondell",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8483450,
+      "name": "R. Greene",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8482062,
+      "name": "C. Smith",
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "sog": 1
+     },
+     {
+      "id": 8476822,
+      "name": "L. Glendening",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8478233,
+      "name": "A. Mangiapane",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8484390,
+      "name": "R. Kantserov",
+      "g": 2,
+      "a": 0,
+      "pts": 2,
+      "sog": 2
+     },
+     {
+      "id": 8476882,
+      "name": "T. Teravainen",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8474141,
+      "name": "P. Kane",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 1
+     },
+     {
+      "id": 8483493,
+      "name": "F. Nazar",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8483506,
+      "name": "S. Rinzel",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 3
+     },
+     {
+      "id": 8483466,
+      "name": "K. Korchinski",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8474013,
+      "name": "I. Cole",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8482807,
+      "name": "E. Del Mastro",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 0
+     },
+     {
+      "id": 8484783,
+      "name": "A. Levshunov",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8481568,
+      "name": "A. Vlasic",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8474586,
+      "name": "J. Eberle",
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "sog": 2
+     },
+     {
+      "id": 8476905,
+      "name": "C. Stephenson",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8482665,
+      "name": "M. Beniers",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 6
+     },
+     {
+      "id": 8482713,
+      "name": "M. Samoskevich",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 3
+     },
+     {
+      "id": 8482751,
+      "name": "R. Winterton",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8484800,
+      "name": "B. Catton",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 1
+     },
+     {
+      "id": 8483570,
+      "name": "B. Meyers",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8482874,
+      "name": "J. Melanson",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8484241,
+      "name": "M. Wood",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8482259,
+      "name": "B. McMann",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 3
+     },
+     {
+      "id": 8481554,
+      "name": "K. Kakko",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8477919,
+      "name": "F. Gaudreau",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8476457,
+      "name": "A. Larsson",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8479372,
+      "name": "J. Mahura",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8478407,
+      "name": "V. Dunn",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8482858,
+      "name": "R. Evans",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8479324,
+      "name": "R. Lindgren",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8477986,
+      "name": "B. Montour",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 3
+     }
+    ]
+   },
+   {
+    "id": 2026020398,
+    "away": "SJS",
+    "home": "ANA",
+    "state": "OFF",
+    "players": [
+     {
+      "id": 8484227,
+      "name": "W. Smith",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8480848,
+      "name": "T. Dellandrea",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8477505,
+      "name": "A. Wennberg",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8476624,
+      "name": "B. Goodrow",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8478975,
+      "name": "M. Marchment",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8486103,
+      "name": "I. Stenberg",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8484911,
+      "name": "C. Graf",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8482859,
+      "name": "Z. Ostapchuk",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8484801,
+      "name": "M. Celebrini",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8475726,
+      "name": "T. Toffoli",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8485402,
+      "name": "M. Misa",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8478874,
+      "name": "A. Gaudette",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8482700,
+      "name": "N. Allan",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8484806,
+      "name": "S. Dickinson",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8480891,
+      "name": "M. Kesselring",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 3
+     },
+     {
+      "id": 8475200,
+      "name": "D. Orlov",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 1
+     },
+     {
+      "id": 8477498,
+      "name": "D. Nurse",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 4
+     },
+     {
+      "id": 8484421,
+      "name": "E. Pohlkamp",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8482118,
+      "name": "S. Colangelo",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 0
+     },
+     {
+      "id": 8481754,
+      "name": "N. Nesterenko",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 0
+     },
+     {
+      "id": 8473986,
+      "name": "A. Killorn",
+      "g": 2,
+      "a": 0,
+      "pts": 2,
+      "sog": 3
+     },
+     {
+      "id": 8478873,
+      "name": "T. Terry",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8481538,
+      "name": "J. Caulfield",
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "sog": 1
+     },
+     {
+      "id": 8482408,
+      "name": "J. Malott",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 0
+     },
+     {
+      "id": 8485512,
+      "name": "T. Washe",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 0
+     },
+     {
+      "id": 8484201,
+      "name": "N. Myatovic",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 0
+     },
+     {
+      "id": 8483445,
+      "name": "C. Gauthier",
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "sog": 2
+     },
+     {
+      "id": 8475798,
+      "name": "M. Granlund",
+      "g": 0,
+      "a": 3,
+      "pts": 3,
+      "sog": 4
+     },
+     {
+      "id": 8478366,
+      "name": "F. Vatrano",
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "sog": 5
+     },
+     {
+      "id": 8485400,
+      "name": "R. McQueen",
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "sog": 2
+     },
+     {
+      "id": 8481605,
+      "name": "J. LaCombe",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 1
+     },
+     {
+      "id": 8482178,
+      "name": "I. Moore",
+      "g": 1,
+      "a": 1,
+      "pts": 2,
+      "sog": 2
+     },
+     {
+      "id": 8481563,
+      "name": "D. Helleson",
+      "g": 0,
+      "a": 2,
+      "pts": 2,
+      "sog": 0
+     },
+     {
+      "id": 8484859,
+      "name": "S. Solberg",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 4
+     },
+     {
+      "id": 8483482,
+      "name": "T. Luneau",
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "sog": 2
+     },
+     {
+      "id": 8483490,
+      "name": "P. Mintyukov",
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "sog": 2
+     }
+    ]
+   }
+  ]
+ }
+}
